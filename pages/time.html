@@ -1,0 +1,26 @@
+<html>
+<head><title>Current Time</title></head>
+<body>
+<h1>Current Time</h1>
+<p><strong>Hours:</strong> <span id="hours"></span></p>
+<p><strong>Minutes:</strong> <span id="minutes"></span></p>
+<p><strong>Seconds:</strong> <span id="seconds"></span></p>
+
+<script>
+    function updateTime() {
+        fetch("/time")
+        .then(response => response.text())
+        .then(data => {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString(data, 'text/html');
+            document.getElementById("hours").innerText = doc.querySelector("strong:contains('Hours:') + p").innerText;
+            document.getElementById("minutes").innerText = doc.querySelector("strong:contains('Minutes:') + p").innerText;
+            document.getElementById("seconds").innerText = doc.querySelector("strong:contains('Seconds:') + p").innerText;
+        });
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+</script>
+</body>
+</html>
