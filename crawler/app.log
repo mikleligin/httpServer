@@ -1,0 +1,2 @@
+2024-12-19 15:33:30,154 - INFO - Successfully fetched time: 15:33:30
+2024-12-19 15:33:34,254 - ERROR - Error sending time data to server: HTTPConnectionPool(host='localhost', port=1234): Max retries exceeded with url: /setTime (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F384EE1460>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
