@@ -1,0 +1,153 @@
+2024-12-19 15:33:30,154 - INFO - Successfully fetched time: 15:33:30
+2024-12-19 15:33:34,254 - ERROR - Error sending time data to server: HTTPConnectionPool(host='localhost', port=1234): Max retries exceeded with url: /setTime (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F384EE1460>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2024-12-19 15:50:38,171 - INFO - Successfully fetched time: 15:50:38
+2024-12-19 15:50:38,180 - ERROR - Error sending time data to server: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-12-19 15:51:57,217 - INFO - Successfully fetched time: 15:51:57
+2024-12-19 15:51:57,226 - ERROR - Error sending time data to server: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-12-19 15:57:32,635 - INFO - Successfully fetched time: 15:57:33
+2024-12-19 15:57:32,646 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '33'}
+2024-12-19 15:57:35,111 - INFO - Successfully fetched time: 15:57:35
+2024-12-19 15:57:35,125 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '35'}
+2024-12-19 15:57:37,633 - INFO - Successfully fetched time: 15:57:38
+2024-12-19 15:57:37,638 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '38'}
+2024-12-19 15:57:40,213 - INFO - Successfully fetched time: 15:57:40
+2024-12-19 15:57:40,225 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '40'}
+2024-12-19 15:57:42,741 - INFO - Successfully fetched time: 15:57:43
+2024-12-19 15:57:42,755 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '43'}
+2024-12-19 15:57:45,232 - INFO - Successfully fetched time: 15:57:45
+2024-12-19 15:57:45,240 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '45'}
+2024-12-19 15:57:47,693 - INFO - Successfully fetched time: 15:57:48
+2024-12-19 15:57:47,699 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '48'}
+2024-12-19 15:57:50,222 - INFO - Successfully fetched time: 15:57:50
+2024-12-19 15:57:50,233 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '50'}
+2024-12-19 15:57:52,985 - INFO - Successfully fetched time: 15:57:53
+2024-12-19 15:57:53,001 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '53'}
+2024-12-19 15:57:55,591 - INFO - Successfully fetched time: 15:57:56
+2024-12-19 15:57:55,608 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '56'}
+2024-12-19 15:57:58,133 - INFO - Successfully fetched time: 15:57:58
+2024-12-19 15:57:58,141 - INFO - Successfully sent time data: {'h': '15', 'm': '57', 'sec': '58'}
+2024-12-19 15:58:00,606 - INFO - Successfully fetched time: 15:58:01
+2024-12-19 15:58:00,611 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '01'}
+2024-12-19 15:58:03,147 - INFO - Successfully fetched time: 15:58:03
+2024-12-19 15:58:03,154 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '03'}
+2024-12-19 15:58:05,623 - INFO - Successfully fetched time: 15:58:06
+2024-12-19 15:58:05,635 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '06'}
+2024-12-19 15:58:08,100 - INFO - Successfully fetched time: 15:58:08
+2024-12-19 15:58:08,107 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '08'}
+2024-12-19 15:58:10,739 - INFO - Successfully fetched time: 15:58:11
+2024-12-19 15:58:10,747 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '11'}
+2024-12-19 15:58:13,335 - INFO - Successfully fetched time: 15:58:13
+2024-12-19 15:58:13,341 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '13'}
+2024-12-19 15:58:15,901 - INFO - Successfully fetched time: 15:58:16
+2024-12-19 15:58:15,920 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '16'}
+2024-12-19 15:58:18,501 - INFO - Successfully fetched time: 15:58:19
+2024-12-19 15:58:18,516 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '19'}
+2024-12-19 15:58:20,986 - INFO - Successfully fetched time: 15:58:21
+2024-12-19 15:58:20,998 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '21'}
+2024-12-19 15:58:23,456 - INFO - Successfully fetched time: 15:58:24
+2024-12-19 15:58:23,465 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '24'}
+2024-12-19 15:58:26,045 - INFO - Successfully fetched time: 15:58:26
+2024-12-19 15:58:26,052 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '26'}
+2024-12-19 15:58:28,606 - INFO - Successfully fetched time: 15:58:29
+2024-12-19 15:58:28,613 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '29'}
+2024-12-19 15:58:31,532 - INFO - Successfully fetched time: 15:58:32
+2024-12-19 15:58:31,547 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '32'}
+2024-12-19 15:58:34,401 - INFO - Successfully fetched time: 15:58:34
+2024-12-19 15:58:34,419 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '34'}
+2024-12-19 15:58:36,997 - INFO - Successfully fetched time: 15:58:37
+2024-12-19 15:58:37,018 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '37'}
+2024-12-19 15:58:40,363 - INFO - Successfully fetched time: 15:58:40
+2024-12-19 15:58:40,372 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '40'}
+2024-12-19 15:58:42,936 - INFO - Successfully fetched time: 15:58:43
+2024-12-19 15:58:42,947 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '43'}
+2024-12-19 15:58:45,728 - INFO - Successfully fetched time: 15:58:46
+2024-12-19 15:58:45,741 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '46'}
+2024-12-19 15:58:48,359 - INFO - Successfully fetched time: 15:58:48
+2024-12-19 15:58:48,372 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '48'}
+2024-12-19 15:58:51,033 - INFO - Successfully fetched time: 15:58:51
+2024-12-19 15:58:51,052 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '51'}
+2024-12-19 15:58:53,852 - INFO - Successfully fetched time: 15:58:54
+2024-12-19 15:58:53,867 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '54'}
+2024-12-19 15:58:56,420 - INFO - Successfully fetched time: 15:58:56
+2024-12-19 15:58:56,429 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '56'}
+2024-12-19 15:58:59,004 - INFO - Successfully fetched time: 15:58:59
+2024-12-19 15:58:59,013 - INFO - Successfully sent time data: {'h': '15', 'm': '58', 'sec': '59'}
+2024-12-19 15:59:02,129 - INFO - Successfully fetched time: 15:59:02
+2024-12-19 15:59:02,137 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '02'}
+2024-12-19 15:59:04,698 - INFO - Successfully fetched time: 15:59:05
+2024-12-19 15:59:04,705 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '05'}
+2024-12-19 15:59:07,265 - INFO - Successfully fetched time: 15:59:07
+2024-12-19 15:59:07,274 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '07'}
+2024-12-19 15:59:09,876 - INFO - Successfully fetched time: 15:59:10
+2024-12-19 15:59:09,882 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '10'}
+2024-12-19 15:59:12,451 - INFO - Successfully fetched time: 15:59:12
+2024-12-19 15:59:12,460 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '12'}
+2024-12-19 15:59:15,850 - INFO - Successfully fetched time: 15:59:16
+2024-12-19 15:59:15,856 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '16'}
+2024-12-19 15:59:39,148 - INFO - Successfully fetched time: 15:59:39
+2024-12-19 15:59:39,156 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '39'}
+2024-12-19 15:59:41,625 - INFO - Successfully fetched time: 15:59:42
+2024-12-19 15:59:41,630 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '42'}
+2024-12-19 15:59:44,230 - INFO - Successfully fetched time: 15:59:44
+2024-12-19 15:59:44,239 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '44'}
+2024-12-19 15:59:46,825 - INFO - Successfully fetched time: 15:59:47
+2024-12-19 15:59:46,831 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '47'}
+2024-12-19 15:59:49,379 - INFO - Successfully fetched time: 15:59:49
+2024-12-19 15:59:49,385 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '49'}
+2024-12-19 15:59:51,896 - INFO - Successfully fetched time: 15:59:52
+2024-12-19 15:59:51,903 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '52'}
+2024-12-19 15:59:54,370 - INFO - Successfully fetched time: 15:59:54
+2024-12-19 15:59:54,391 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '54'}
+2024-12-19 15:59:56,939 - INFO - Successfully fetched time: 15:59:57
+2024-12-19 15:59:56,986 - INFO - Successfully sent time data: {'h': '15', 'm': '59', 'sec': '57'}
+2024-12-19 15:59:59,561 - INFO - Successfully fetched time: 16:00:00
+2024-12-19 15:59:59,568 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '00'}
+2024-12-19 16:00:02,351 - INFO - Successfully fetched time: 16:00:02
+2024-12-19 16:00:02,387 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '02'}
+2024-12-19 16:00:05,366 - INFO - Successfully fetched time: --:--:--
+2024-12-19 16:00:05,390 - INFO - Successfully sent time data: {'h': '--', 'm': '--', 'sec': '--'}
+2024-12-19 16:00:07,960 - INFO - Successfully fetched time: --:--:--
+2024-12-19 16:00:07,977 - INFO - Successfully sent time data: {'h': '--', 'm': '--', 'sec': '--'}
+2024-12-19 16:00:10,515 - INFO - Successfully fetched time: --:--:--
+2024-12-19 16:00:10,527 - INFO - Successfully sent time data: {'h': '--', 'm': '--', 'sec': '--'}
+2024-12-19 16:00:13,088 - INFO - Successfully fetched time: --:--:--
+2024-12-19 16:00:13,106 - INFO - Successfully sent time data: {'h': '--', 'm': '--', 'sec': '--'}
+2024-12-19 16:00:15,723 - INFO - Successfully fetched time: --:--:--
+2024-12-19 16:00:15,756 - INFO - Successfully sent time data: {'h': '--', 'm': '--', 'sec': '--'}
+2024-12-19 16:00:18,447 - INFO - Successfully fetched time: --:--:--
+2024-12-19 16:00:18,456 - INFO - Successfully sent time data: {'h': '--', 'm': '--', 'sec': '--'}
+2024-12-19 16:00:21,297 - INFO - Successfully fetched time: --:--:--
+2024-12-19 16:00:21,304 - INFO - Successfully sent time data: {'h': '--', 'm': '--', 'sec': '--'}
+2024-12-19 16:00:23,837 - INFO - Successfully fetched time: 16:00:24
+2024-12-19 16:00:23,848 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '24'}
+2024-12-19 16:00:26,460 - INFO - Successfully fetched time: 16:00:27
+2024-12-19 16:00:26,467 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '27'}
+2024-12-19 16:00:29,647 - INFO - Successfully fetched time: 16:00:30
+2024-12-19 16:00:29,665 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '30'}
+2024-12-19 16:00:32,148 - INFO - Successfully fetched time: 16:00:32
+2024-12-19 16:00:32,155 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '32'}
+2024-12-19 16:00:34,764 - INFO - Successfully fetched time: 16:00:35
+2024-12-19 16:00:34,779 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '35'}
+2024-12-19 16:00:37,329 - INFO - Successfully fetched time: 16:00:37
+2024-12-19 16:00:37,335 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '37'}
+2024-12-19 16:00:39,816 - INFO - Successfully fetched time: 16:00:40
+2024-12-19 16:00:39,823 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '40'}
+2024-12-19 16:00:42,366 - INFO - Successfully fetched time: 16:00:42
+2024-12-19 16:00:42,380 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '42'}
+2024-12-19 16:00:44,858 - INFO - Successfully fetched time: 16:00:45
+2024-12-19 16:00:44,874 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '45'}
+2024-12-19 16:00:47,461 - INFO - Successfully fetched time: 16:00:48
+2024-12-19 16:00:47,470 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '48'}
+2024-12-19 16:00:49,952 - INFO - Successfully fetched time: 16:00:50
+2024-12-19 16:00:49,959 - INFO - Successfully sent time data: {'h': '16', 'm': '00', 'sec': '50'}
+2024-12-19 16:00:52,566 - INFO - Successfully fetched time: 16:00:53
+2024-12-19 16:00:53,110 - ERROR - Error sending time data to server: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2024-12-19 16:00:55,848 - INFO - Successfully fetched time: 16:00:56
+2024-12-19 16:00:57,902 - ERROR - Error sending time data to server: HTTPConnectionPool(host='192.168.1.65', port=1234): Max retries exceeded with url: /setTime (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000148838A31D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2024-12-19 16:01:00,414 - INFO - Successfully fetched time: 16:01:00
+2024-12-19 16:01:02,458 - ERROR - Error sending time data to server: HTTPConnectionPool(host='192.168.1.65', port=1234): Max retries exceeded with url: /setTime (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014884726720>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2024-12-19 16:01:05,152 - INFO - Successfully fetched time: 16:01:05
+2024-12-19 16:01:07,212 - ERROR - Error sending time data to server: HTTPConnectionPool(host='192.168.1.65', port=1234): Max retries exceeded with url: /setTime (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014884726D80>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2024-12-19 16:01:09,748 - INFO - Successfully fetched time: 16:01:10
+2024-12-19 16:01:11,810 - ERROR - Error sending time data to server: HTTPConnectionPool(host='192.168.1.65', port=1234): Max retries exceeded with url: /setTime (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014884650560>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2024-12-19 16:01:14,407 - INFO - Successfully fetched time: 16:01:14
