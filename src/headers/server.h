@@ -20,6 +20,7 @@ class Server {
     public:
         Server(int port) : serverPort(port){};
         void run();
+        void updateTime();
         static std::string hours;
         static std::string mins;
         static std::string sec;

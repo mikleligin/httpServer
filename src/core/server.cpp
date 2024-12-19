@@ -3,7 +3,20 @@
 std::string Server::hours = "00";
 std::string Server::mins = "00";
 std::string Server::sec = "00";
- 
+std::string tempH;
+std::string tempM;
+std::string tempS;
+
+
+void Server::updateTime() {
+    while (true) {
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        hours = tempH;
+        mins = tempM;
+        sec = tempS;
+    }
+}
+
 void Server::run(){
     int server_fd, new_socket;
     struct sockaddr_in address;
@@ -34,26 +47,38 @@ void Server::run(){
     }
 }
 
+
 void Server::getQuery(int socket, const string& request){
 
     string path = "../pages/" + request;
-    
-    if (request == "time") {
-        string htmlResponse = 
-            "<html>"
-            "<head><title>Current Time</title></head>"
-            "<body>"
-            "<h1>Current Time</h1>"
-            "<p><strong>Hours:</strong> " + hours + "</p>"
-            "<p><strong>Minutes:</strong> " + mins + "</p>"
-            "<p><strong>Seconds:</strong> " + sec + "</p>"
-            "</body>"
-            "</html>";
+    if (request == "getTime") {
+        std::cout << "site wanna this" << std::endl;
+        string jsonResponse = "{"
+            "\"hours\": \"" + tempH + "\","
+            "\"minutes\": \"" + tempM + "\","
+            "\"seconds\": \"" + tempS + "\""
+            "}";
 
-        string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n" + htmlResponse;
+        string response = "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\n\r\n" + jsonResponse;
         send(socket, response.c_str(), response.size(), 0);
         return;
     }
+    // if (request == "time") {
+    //     string htmlResponse = 
+    //         "<html>"
+    //         "<head><title>Current Time</title></head>"
+    //         "<body>"
+    //         "<h1>Current Time</h1>"
+    //         "<p><strong>Hours:</strong> " + hours + "</p>"
+    //         "<p><strong>Minutes:</strong> " + mins + "</p>"
+    //         "<p><strong>Seconds:</strong> " + sec + "</p>"
+    //         "</body>"
+    //         "</html>";
+
+    //     string response = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n" + htmlResponse;
+    //     send(socket, response.c_str(), response.size(), 0);
+    //     return;
+    // }
     if (request.find(".html"))
     {
         
@@ -96,29 +121,38 @@ void Server::postQuery(int socket, const string& request, string fullReq){
     string getpost = getRequestBody(fullReq);
     if (request == "setTime")
     {
-        std::string jsonString = extractJson(fullReq);
-        json x = json::parse(jsonString);
-        hours = clearQuote(x["h"].dump());
-        mins = clearQuote(x["h"].dump());
-        sec = clearQuote(x["h"].dump());
-        std::string htmlResponse = 
-            "<html>"
-            "<head><title>Time Set</title></head>"
-            "<body>"
-            "<h1>Time Set Successfully</h1>"
-            "<p><strong>Hours:</strong> " + hours + "</p>"
-            "<p><strong>Minutes:</strong> " + mins + "</p>"
-            "<p><strong>Seconds:</strong> " + sec + "</p>"
-            "</body>"
-            "</html>";
+        try {
+            std::string jsonString = extractJson(fullReq);
+            json x = json::parse(jsonString);
+            tempH = clearQuote(x["h"].dump());
+            tempM = clearQuote(x["m"].dump());
+            tempS = clearQuote(x["sec"].dump());
+            
+            std::string htmlResponse = 
+                "<html>"
+                "<head><title>Time Set</title></head>"
+                "<body>"
+                "<h1>Time Set Successfully</h1>"
+                "<p><strong>Hours:</strong> " + tempH + "</p>"
+                "<p><strong>Minutes:</strong> " +tempM + "</p>"
+                "<p><strong>Seconds:</strong> " +  tempS + "</p>"
+                "</body>"
+                "</html>";
 
-        std::string httpResponse = 
-            "HTTP/1.1 200 OK\r\n"
-            "Content-Type: text/html\r\n\r\n" + 
-            htmlResponse;
-        send(socket, httpResponse.c_str(), httpResponse.size(), 0);
+            std::string httpResponse = 
+                "HTTP/1.1 200 OK\r\n"
+                "Content-Type: text/html\r\n\r\n" + 
+                htmlResponse;
+            send(socket, httpResponse.c_str(), httpResponse.size(), 0);
+            return;
+        } catch (const json::parse_error& e) {
+            std::cerr << "JSON parsing error: " << e.what() << std::endl;
+            sendErrorResponse(socket, "400 Bad Request");
+        } catch (const std::exception& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
+            sendErrorResponse(socket, "500 Internal Server Error");  
+        }
         return;
-
         
     }
     
@@ -137,7 +171,7 @@ void Server::postQuery(int socket, const string& request, string fullReq){
             unordered_map<string, string> credentials = parseCredentials(line);
             if (credentials["username"] == username && password == credentials["password"])
             {
-                getQuery(socket, "login.html");
+                getQuery(socket, "time.html");
             }
             else{
                 getQuery(socket, "invalidCreds.html");
