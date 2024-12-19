@@ -4,12 +4,16 @@ import sys
 import re
 import logging
 import json
+import threading
+import time
 
 logging.basicConfig(
     filename='app.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
+
+current_url = None
 
 
 def fetch_html(url):
@@ -19,7 +23,7 @@ def fetch_html(url):
         return response.text
     except requests.exceptions.RequestException as e:
         logging.error(f"Error fetching the HTML from {url}: {e}")
-        raise Exception(f"Error fetching the HTML from {url}: {e}")
+        return None
 
 
 def extract_time(html):
@@ -45,7 +49,7 @@ def extract_time(html):
 
 
 def send_time_to_server(hour, minute, second):
-    url = "http://localhost:1234/setTime"
+    url = "http://192.168.1.65:1234/setTime"
     data = {
         "h": hour,
         "m": minute,
@@ -53,7 +57,7 @@ def send_time_to_server(hour, minute, second):
     }
     try:
         response = requests.post(url, json=data)
-        response.raise_for_status()  # Raise an error for bad status codes
+        response.raise_for_status()
         logging.info(f"Successfully sent time data: {data}")
         print(f"Successfully sent time data: {data}")
     except requests.exceptions.RequestException as e:
@@ -61,23 +65,42 @@ def send_time_to_server(hour, minute, second):
         print(f"Error sending time data to server: {e}")
 
 
+def update_url():
+    global current_url
+    while True:
+        new_url = input(
+            "Please enter the URL (or press Enter to keep the current one): ").strip()
+        if new_url:
+            current_url = new_url
+
+
+def fetch_and_send_time():
+    while True:
+        if current_url:
+            html = fetch_html(current_url)
+            if html:
+                current_time = extract_time(html)
+                print(f"Current time: {current_time}")
+                logging.info(f"Successfully fetched time: {current_time}")
+
+                time_parts = current_time.split(":")
+                if len(time_parts) == 3:
+                    hour, minute, second = time_parts
+                    send_time_to_server(hour, minute, second)
+                else:
+                    print("Error: Unable to extract time in correct format")
+                    logging.error("Unable to extract time in correct format")
+        time.sleep(2)
+
+
 if __name__ == "__main__":
-    url = input("Please enter the URL: ").strip()
+    current_url = input("Please enter the initial URL: ").strip()
 
-    try:
-        html = fetch_html(url)
-        current_time = extract_time(html)
-        print(f"Current time: {current_time}")
-        logging.info(f"Successfully fetched time: {current_time}")
+    url_thread = threading.Thread(target=update_url, daemon=True)
+    url_thread.start()
 
-        time_parts = current_time.split(":")
-        if len(time_parts) == 3:
-            hour, minute, second = time_parts
-            send_time_to_server(hour, minute, second)
-        else:
-            print("Error: Unable to extract time in correct format")
-            logging.error("Unable to extract time in correct format")
+    fetch_thread = threading.Thread(target=fetch_and_send_time, daemon=True)
+    fetch_thread.start()
 
-    except Exception as e:
-        print(f"Error: {e}")
-        logging.error(f"Error: {e}")
+    while True:
+        time.sleep(1)
